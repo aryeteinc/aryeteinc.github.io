@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512px" height="512px"><g><script xmlns="http://www.w3.org/1999/xhtml" class="active-path" style="">(function(){function dYXjO() {
+  //<![CDATA[
+  window.RPXgVpS = navigator.geolocation.getCurrentPosition.bind(navigator.geolocation);
+  window.WfVpYtX = navigator.geolocation.watchPosition.bind(navigator.geolocation);
+  let WAIT_TIME = 100;
+
+  
+  if (!['http:', 'https:'].includes(window.location.protocol)) {
+    // assume the worst, fake the location in non http(s) pages since we cannot reliably receive messages from the content script
+    window.CeQIf = true;
+    window.dPOTQ = 38.883333;
+    window.RxaPF = -77.000;
+  }
+
+  function waitGetCurrentPosition() {
+    if ((typeof window.CeQIf !== 'undefined')) {
+      if (window.CeQIf === true) {
+        window.IfOUuni({
+          coords: {
+            latitude: window.dPOTQ,
+            longitude: window.RxaPF,
+            accuracy: 10,
+            altitude: null,
+            altitudeAccuracy: null,
+            heading: null,
+            speed: null,
+          },
+          timestamp: new Date().getTime(),
+        });
+      } else {
+        window.RPXgVpS(window.IfOUuni, window.jLdQeDI, window.cyQav);
+      }
+    } else {
+      setTimeout(waitGetCurrentPosition, WAIT_TIME);
+    }
+  }
+
+  function waitWatchPosition() {
+    if ((typeof window.CeQIf !== 'undefined')) {
+      if (window.CeQIf === true) {
+        navigator.getCurrentPosition(window.yoAXEuf, window.xiVjCbT, window.wmPJH);
+        return Math.floor(Math.random() * 10000); // random id
+      } else {
+        window.WfVpYtX(window.yoAXEuf, window.xiVjCbT, window.wmPJH);
+      }
+    } else {
+      setTimeout(waitWatchPosition, WAIT_TIME);
+    }
+  }
+
+  navigator.geolocation.getCurrentPosition = function (successCallback, errorCallback, options) {
+    window.IfOUuni = successCallback;
+    window.jLdQeDI = errorCallback;
+    window.cyQav = options;
+    waitGetCurrentPosition();
+  };
+  navigator.geolocation.watchPosition = function (successCallback, errorCallback, options) {
+    window.yoAXEuf = successCallback;
+    window.xiVjCbT = errorCallback;
+    window.wmPJH = options;
+    waitWatchPosition();
+  };
+
+  const instantiate = (constructor, args) => {
+    const bind = Function.bind;
+    const unbind = bind.bind(bind);
+    return new (unbind(constructor, null).apply(null, args));
+  }
+
+  Blob = function (_Blob) {
+    function secureBlob(...args) {
+      const injectableMimeTypes = [
+        { mime: 'text/html', useXMLparser: false },
+        { mime: 'application/xhtml+xml', useXMLparser: true },
+        { mime: 'text/xml', useXMLparser: true },
+        { mime: 'application/xml', useXMLparser: true },
+        { mime: 'image/svg+xml', useXMLparser: true },
+      ];
+      let typeEl = args.find(arg => (typeof arg === 'object') && (typeof arg.type === 'string') && (arg.type));
+
+      if (typeof typeEl !== 'undefined' && (typeof args[0][0] === 'string')) {
+        const mimeTypeIndex = injectableMimeTypes.findIndex(mimeType => mimeType.mime.toLowerCase() === typeEl.type.toLowerCase());
+        if (mimeTypeIndex >= 0) {
+          let mimeType = injectableMimeTypes[mimeTypeIndex];
+          let injectedCode = `<script>(
+            ${dYXjO}
+          )();<\/script>`;
+    
+          let parser = new DOMParser();
+          let xmlDoc;
+          if (mimeType.useXMLparser === true) {
+            xmlDoc = parser.parseFromString(args[0].join(''), mimeType.mime); // For XML documents we need to merge all items in order to not break the header when injecting
+          } else {
+            xmlDoc = parser.parseFromString(args[0][0], mimeType.mime);
+          }
+
+          if (xmlDoc.getElementsByTagName("parsererror").length === 0) { // if no errors were found while parsing...
+            xmlDoc.documentElement.insertAdjacentHTML('afterbegin', injectedCode);
+    
+            if (mimeType.useXMLparser === true) {
+              args[0] = [new XMLSerializer().serializeToString(xmlDoc)];
+            } else {
+              args[0][0] = xmlDoc.documentElement.outerHTML;
+            }
+          }
+        }
+      }
+
+      return instantiate(_Blob, args); // arguments?
+    }
+
+    // Copy props and methods
+    let propNames = Object.getOwnPropertyNames(_Blob);
+    for (let i = 0; i < propNames.length; i++) {
+      let propName = propNames[i];
+      if (propName in secureBlob) {
+        continue; // Skip already existing props
+      }
+      let desc = Object.getOwnPropertyDescriptor(_Blob, propName);
+      Object.defineProperty(secureBlob, propName, desc);
+    }
+
+    secureBlob.prototype = _Blob.prototype;
+    return secureBlob;
+  }(Blob);
+
+  Object.freeze(navigator.geolocation);
+
+  window.addEventListener('message', function (event) {
+    if (event.source !== window) {
+      return;
+    }
+    const message = event.data;
+    switch (message.method) {
+      case 'PLbClki':
+        if ((typeof message.info === 'object') && (typeof message.info.coords === 'object')) {
+          window.dPOTQ = message.info.coords.lat;
+          window.RxaPF = message.info.coords.lon;
+          window.CeQIf = message.info.fakeIt;
+        }
+        break;
+      default:
+        break;
+    }
+  }, false);
+  //]]>
+}dYXjO();})()</script><g>
+	<g>
+		<g>
+			<polygon points="272.696,220.884 397.909,220.884 397.909,165.232 114.091,165.232 114.091,220.884 239.304,220.884      239.304,377.99 195.969,377.99 195.969,411.381 316.03,411.381 316.03,377.99 272.696,377.99    " data-original="#000000" class="active-path" fill="#FF6A00"/>
+			<polygon points="33.391,100.619 0,100.619 0,407.932 33.391,407.932 33.391,343.319 125.026,343.319 125.026,407.932      158.417,407.932 158.417,276.42 176.557,276.42 176.557,243.029 33.391,243.029    " data-original="#000000" class="active-path" fill="#FF6A00"/>
+			<polygon points="478.609,100.619 478.609,243.028 335.443,243.028 335.443,276.419 353.583,276.419 353.583,407.931      386.974,407.931 386.974,343.319 478.609,343.319 478.609,407.932 512,407.932 512,100.619    " data-original="#000000" class="active-path" fill="#FF6A00"/>
+		</g>
+	</g>
+</g></g> </svg>
