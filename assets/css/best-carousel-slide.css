@@ -9,15 +9,15 @@ div.jumbotron.carousel-hero {
 }
 
 div.jumbotron.hero-nature {
-  background-image: url('/assets/img/bilboacampestreSaturada.jpg?h=eb493154cf50a7fb17537f23f64f5e20');
+  background-image: url('../../assets/img/bilboacampestreSaturada.jpg');
 }
 
 div.jumbotron.hero-photography {
-  background-image: url('/assets/img/architects-and-worker.jpg?h=f85f70e446dd8ff3debacee1c5e04bc6');
+  background-image: url('../../assets/img/architects-and-worker.jpg');
 }
 
 div.jumbotron.hero-technology {
-  background-image: url('/assets/img/young-college-students.jpg?h=3b924573ccef909c6753a54c7f30caf1');
+  background-image: url('../../assets/img/young-college-students.jpg');
 }
 
 h1.hero-title, h2.hero-title, h3.hero-title {
@@ -41,14 +41,14 @@ p.hero-subtitle {
 }
 
 .btn-primary:hover {
-  color: #fff;
-  background-color: #016090;
-  border-color: #016090;
+  /*color: #fff;*/
+  /*background-color: #016090;*/
+  /*border-color: #016090;*/
 }
 
 .btn.btn-primary {
-  background-color: #048f83!important;
-  border-color: #048f83!important;
+  /*background-color: #fd7e14!important;*/
+  /*border-color: #fd7e14!important;*/
 }
 
 .btn-primary.focus, .btn-primary:focus {
@@ -124,37 +124,6 @@ span {
   width: 31.30%;
 }
 
-.card.card-proyect {
-  display: flex;
-  width: 30%;
-  border-radius: 60px;
-  margin: 10px;
-}
-
-@media (min-width: 1920px) {
-  .card.card-proyect {
-    width: 20%;
-    border-radius: 60px;
-    padding: 0px;
-  }
-}
-
-@media (max-width: 768px) {
-  .card.card-proyect {
-    width: 80%;
-    border-radius: 60px;
-    padding: 0px;
-  }
-}
-
-@media (max-width: 414px) {
-  .card.card-proyect {
-    width: 95%;
-    border-radius: 60px;
-    padding: 0px;
-  }
-}
-
 .card-img-top.w-100.d-block.img-proyect-item {
   border-top-left-radius: 60px;
   border-top-right-radius: 60px;
@@ -166,28 +135,6 @@ span {
     display: flex;
     align-items: start;
     justify-content: center;
-  }
-}
-
-.col-sm-12.col-md-12.col-lg-12.col-xl-12.col-proyectos {
-  display: flex;
-}
-
-@media (min-width: 769px) {
-  .col-sm-12.col-md-12.col-lg-12.col-xl-12.col-proyectos {
-    display: flex;
-    /*flex-direction: column;*/
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-@media (max-width: 768px) {
-  .col-sm-12.col-md-12.col-lg-12.col-xl-12.col-proyectos {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 }
 

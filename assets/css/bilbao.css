@@ -17,6 +17,7 @@ header {
   height: 4px;
   margin-top: -20px;
   width: 400px;
+  border: 0px solid;
 }
 
 .list-icon-item {

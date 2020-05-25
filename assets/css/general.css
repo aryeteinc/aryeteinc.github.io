@@ -1,0 +1,166 @@
+.titulo-proyecto {
+  font-family: 'Merriweather';
+  font-style: italic;
+  font-weight: bold;
+  margin-bottom: -5px;
+}
+
+.lead.subtitle-project {
+  font-family: 'Merriweather';
+  font-size: 20px;
+  font-style: italic;
+  font-weight: normal !important;
+}
+
+.estado-obra {
+  font-size: 15px;
+  color: #FF6A00;
+  font-family: 'lato', 'sans-serif';
+  font-style: italic;
+}
+
+.texto-card {
+  margin: 0px;
+  padding: 0px;
+}
+
+.titulo-section-blanco {
+  font-family: Merriweather, serif;
+  font-style: italic;
+  color: #f2f2f2;
+  margin-bottom: -16px;
+}
+
+.titulo-section-negro {
+  font-family: Merriweather, serif;
+  font-style: italic;
+  color: #080808;
+  margin-bottom: -16px;
+  opacity: 0.70;
+}
+
+.subtitulo-section-blanco {
+  font-family: Merriweather, serif;
+  font-style: italic;
+  color: #f2f2f2;
+  margin-bottom: 20px;
+}
+
+.marker {
+  margin-bottom: -10px;
+  border-radius: 50% 50% 50% 0;
+  border: 4px solid #FF6A00;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background-color: #FFffff;
+  transform: rotate(-90);
+  background-repeat: no-repeat;
+}
+
+.mapboxgl-popup {
+  min-width: 230px;
+  max-width: 400px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  padding-bottom: 30px;
+}
+
+.map-project-title {
+  font-family: 'Merriweather';
+  color: #2A2C35;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.map-project-description {
+  font-family: 'Roboto';
+  color: #A4A6B1;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 10px;
+}
+
+.map-enlaces {
+  color: #007CFF;
+}
+
+.map-enlaces:hover {
+  color: #000000;
+}
+
+@media (max-width: 767px) {
+  #map {
+    width: 95%;
+    height: 600px;
+  }
+}
+
+@media (min-width: 768px) {
+  #map {
+    width: 50%;
+    height: 600px;
+  }
+}
+
+@media (max-width: 414px) {
+  .card-proyect {
+    width: 100%;
+    border-radius: 60px;
+    padding: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-proyect {
+    width: 100%;
+    border-radius: 60px;
+    padding: 0px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .card-proyect {
+    width: 25%;
+    border-radius: 60px;
+    padding: 0px;
+  }
+}
+
+.card-proyect {
+  display: flex;
+  width: 100%;
+  border-radius: 60px;
+  margin: 10px;
+}
+
+.proyectos-items-menu {
+  background-color: #080808;
+  color: #f2f2f2;
+}
+
+.proyectos-items-menu:hover {
+  background-color: #f2f2f2;
+  color: #080808;
+}
+
+.cuadro-submenu {
+  background-color: #080808;
+}
+
+.link-texto {
+  color: #FF6A00;
+}
+
+.link-texto, .link-texto:hover {
+  /*color: #080808;*/
+  /*font-size: 18px;*/
+  text-decoration: none;
+  text-shadow: 3px 1px 6px rgba(150, 150, 150, 0.7);
+}
+

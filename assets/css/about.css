@@ -1,0 +1,20 @@
+.panel-borroso {
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.m-5.border.rounded.panel-borroso {
+}
+
+.row {
+}
+
+.subtitulo-section-blanco-sombra {
+  text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+  font-family: Merriweather, serif;
+  font-style: italic;
+  color: #f2f2f2;
+  /*margin-bottom: 20px;*/
+}
+
