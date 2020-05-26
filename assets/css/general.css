@@ -96,14 +96,14 @@
 
 @media (max-width: 767px) {
   #map {
-    width: 95%;
+    width: 100%;
     height: 600px;
   }
 }
 
 @media (min-width: 768px) {
   #map {
-    width: 50%;
+    width: 100%;
     height: 600px;
   }
 }
