@@ -16,7 +16,7 @@ var geojson = {
             coordinates: [-74.980944, 10.964778],
         },
         properties: {
-            title: "Rviera del Mar",
+            title: "Riviera del Mar",
             description: "Reserva Campestre",
             address2: "Puerto Colombia,Atlántico",
             url: "rivieradelmar.html",
