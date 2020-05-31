@@ -1,2 +1,0 @@
-# aryeteinc.github.io
- 
